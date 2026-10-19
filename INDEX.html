@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopEase | Everyday shopping, made easy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">Shop<span>Ease</span></a>
+    <input type="search" id="search" placeholder="Search products" aria-label="Search products">
+    <button id="cart-toggle" class="cart-btn" aria-label="Open cart">
+      Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>Good things, delivered without the fuss.</h1>
+    <p>Browse, add to cart, and check out in under a minute.</p>
+  </section>
+
+  <main>
+    <div class="filters" id="filters" role="tablist" aria-label="Categories"></div>
+    <div class="toolbar">
+      <span id="result-info"></span>
+      <label>Sort
+        <select id="sort">
+          <option value="default">Featured</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+          <option value="name">Name</option>
+        </select>
+      </label>
+    </div>
+    <div class="grid" id="product-grid"></div>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Your cart</h2>
+      <button id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <div class="drawer-foot">
+      <div class="row"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+      <div class="row"><span>Delivery</span><span id="delivery">$0.00</span></div>
+      <div class="row total"><span>Total</span><strong id="total">$0.00</strong></div>
+      <button id="checkout" class="primary">Place order</button>
+      <button id="clear" class="link">Empty cart</button>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast" role="status"></div>
+  <footer class="footer">© 2026 ShopEase. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+</html>
